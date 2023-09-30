@@ -5,7 +5,10 @@ from PIL import Image
 from roop.typing import Frame
 
 MAX_PROBABILITY = 0
+def clear_predictor() -> None:
+    global PREDICTOR
 
+    PREDICTOR = None
 
 def predict_frame(target_frame: Frame) -> bool:
     image = Image.fromarray(target_frame)
